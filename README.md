@@ -1,2 +1,6 @@
-# bioSite
-CSD 340 bioSite project about Juan Emigdio Cardenas
+# CSD 340 Web Development with HTML and CSS
+
+## Contributors
+
+- Vianelis Martinez
+- Juan Cardenas
