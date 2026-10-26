@@ -5,6 +5,9 @@
 */
 
 /* General Page Styles */
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     background-color: #F6F1E8;
@@ -32,9 +35,10 @@ header {
     background-color: #1F3556;
     color: white;
     padding: 20px;
+    width: 100%;
 }
 .site-header {
-    max-width: 1100px;
+    max-width: 1250px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -61,9 +65,9 @@ nav a:hover {
 }
 /* Main Content */
 #container {
-    max-width: 1100px;
+    max-width: 1250px;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
 }
 section {
     margin-bottom: 50px;
@@ -71,7 +75,7 @@ section {
 /* Hero Section */
 .hero {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 30px;
     align-items: center;
 }
@@ -97,6 +101,7 @@ figure {
 }
 figure img {
     width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
 }
@@ -121,25 +126,32 @@ figcaption {
 /* Landing Page Story Cards */
 .card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 .card {
     background-color: white;
     padding: 20px;
     border: 1px solid #8A9B83;
+    min-width: 0;
 }
 .card h3 {
     margin-bottom: 10px;
 }
 .card img {
+    width: 100%;
+    max-width: 100%;
     height: 200px;
     object-fit: cover;
+}
+/* Running Photo - Show Entire Image */
+.card img[src="images/Picture12.jpg"] {
+    object-fit: contain;
 }
 /* Marathon Goal Section */
 .marathon-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 30px;
     align-items: center;
 }
@@ -177,7 +189,7 @@ figcaption {
 }
 .quote-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 30px;
     align-items: center;
 }
@@ -225,7 +237,7 @@ blockquote cite {
 }
 .hobby-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 30px;
     align-items: center;
 }
@@ -245,6 +257,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    width: 100%;
 }
 footer p {
     margin: 5px;
