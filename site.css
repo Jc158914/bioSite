@@ -1,7 +1,7 @@
 /*
     Juan Cardenas
-    October 25, 2026
-    Module 7.2 Assignment
+    November 15, 2026
+    bioSite: Final Submission
 */
 
 /* General Page Styles */
@@ -268,4 +268,69 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Layouts for Tablets */
+@media screen and (max-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .site-header {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        text-align: center;
+    }
+    nav {
+        text-align: center;
+    }
+    nav a {
+        display: inline-block;
+        margin: 0 10px 8px;
+    }
+}
+
+/* Responsive Layouts for Phones */
+@media screen and (max-width: 600px) {
+    header, footer {
+        padding: 16px;
+    }
+    #container {
+        padding: 15px;
+    }
+    section {
+        margin-bottom: 30px;
+    }
+    .hero, .marathon-container, .quote-container,
+    .hobby-container, .card-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .marathon-image, .marathon-content,
+    .quote-image, .quote-content {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .site-name {
+        font-size: 16pt;
+    }
+    nav a {
+        margin: 0 8px 8px;
+        padding: 6px 0;
+    }
+    h1 { font-size: 21pt; }
+    h2 { font-size: 17pt; }
+    .introduction, .card, .about-introduction,
+    .quote-section, .about-closing, .hobby-section,
+    .hobbies-closing {
+        padding: 18px;
+    }
+    .card img {
+        height: auto;
+        max-height: 280px;
+        object-fit: contain;
+    }
+    blockquote {
+        font-size: 14pt;
+        padding: 15px;
+    }
 }
